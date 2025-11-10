@@ -7,7 +7,7 @@ import React from "react";
 import Image from "next/image";
 
 const menuItems = [
-  { name: "Solution", href: "#link" },
+  { name: "Solution", href: "#solution" },
   { name: "Team", href: "#link" },
   { name: "Pricing", href: "#link" },
   { name: "About", href: "#link" },
