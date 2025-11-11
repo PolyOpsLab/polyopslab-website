@@ -12,7 +12,7 @@ const menuItems = [
   { name: "Testimonials", href: "#testimonials" },
   { name: "Pricing", href: "#pricing" },
   { name: "Footer", href: "#footer" },
-  { name: "About", href: "#link" },
+  // { name: "About", href: "/contact" },
 ];
 
 export const HeroHeader = () => {
@@ -83,7 +83,7 @@ export const HeroHeader = () => {
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild variant="outline" size="sm">
-                  <Link href="#">
+                  <Link href="/contact">
                     <span>Contact</span>
                   </Link>
                 </Button>
