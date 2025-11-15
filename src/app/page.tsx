@@ -8,7 +8,7 @@ import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HeroSection />
       <FeaturesOne />
       <FeaturesTwo />
@@ -16,6 +16,6 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <FooterSection />
-    </>
+    </div>
   );
 }
