@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
@@ -10,7 +11,7 @@ const World = dynamic(
   }
 );
 
-export function GlobeDemo() {
+export const GlobeDemo = React.memo(() => {
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -429,4 +430,4 @@ export function GlobeDemo() {
       </div>
     </div>
   );
-}
+});
