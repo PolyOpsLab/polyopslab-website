@@ -4,96 +4,57 @@ import Link from "next/link";
 
 export default function Pricing() {
   return (
-    <section className="py-16 md:py-32 mt-10" id="pricing">
+    <div className="relative py-16 md:py-32" id="pricing">
       <div className="mx-auto max-w-5xl px-6">
-        <div className="mx-auto max-w-2xl space-y-6 text-center">
-          <h1 className="text-center text-4xl font-semibold lg:text-5xl">
-            Pricing that Scales with You
-          </h1>
-          <p>
-            Gemini is evolving to be more than just the models. It supports an
-            entire to the APIs and platforms helping developers and businesses
-            innovate.
-          </p>
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-balance text-3xl font-bold md:text-4xl lg:text-5xl">
+            Pricing
+          </h2>
         </div>
-
-        <div className="mt-8 grid gap-6 md:mt-20 md:grid-cols-5 md:gap-0">
-          <div className="rounded-(--radius) flex flex-col justify-between space-y-8 border p-6 md:col-span-2 md:my-2 md:rounded-r-none md:border-r-0 lg:p-10">
-            <div className="space-y-4">
-              <div>
-                <h2 className="font-medium">Free</h2>
-                <span className="my-3 block text-2xl font-semibold">
-                  $0 / mo
+        <div className="mt-8 md:mt-20">
+          <div className="bg-card relative rounded-3xl border shadow-2xl shadow-zinc-950/5">
+            <div className="grid items-center gap-12 divide-y p-12 md:grid-cols-2 md:divide-x md:divide-y-0">
+              <div className="pb-12 text-center md:pb-0 md:pr-12">
+                <span className="mb-6 mt-12 inline-block text-6xl font-bold">
+                  Custom
                 </span>
-                <p className="text-muted-foreground text-sm">Per editor</p>
-              </div>
 
-              <Button asChild variant="outline" className="w-full">
-                <Link href="">Get Started</Link>
-              </Button>
-
-              <hr className="border-dashed" />
-
-              <ul className="list-outside space-y-3 text-sm">
-                {[
-                  "Basic Analytics Dashboard",
-                  "5GB Cloud Storage",
-                  "Email and Chat Support",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <Check className="size-3" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="dark:bg-muted rounded-(--radius) border p-6 shadow-lg shadow-gray-950/5 md:col-span-3 lg:p-10 dark:[--color-muted:var(--color-zinc-900)]">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-4">
-                <div>
-                  <h2 className="font-medium">Pro</h2>
-                  <span className="my-3 block text-2xl font-semibold">
-                    $19 / mo
-                  </span>
-                  <p className="text-muted-foreground text-sm">Per editor</p>
+                <div className="flex justify-center">
+                  <Button asChild size="lg">
+                    <Link href="https://cal.com/polyopslab" target="_blank">
+                      Schedule a Call
+                    </Link>
+                  </Button>
                 </div>
 
-                <Button asChild className="w-full">
-                  <Link href="">Get Started</Link>
-                </Button>
+                <p className="text-muted-foreground mt-12 text-sm">
+                  Includes : Frontend, Backend, Database Storage, Payment
+                  Integration(Stripe) and much more.
+                </p>
               </div>
-
-              <div>
-                <div className="text-sm font-medium">
-                  Everything in free plus :
-                </div>
-
-                <ul className="mt-4 list-outside space-y-3 text-sm">
+              <div className="relative">
+                <ul role="list" className="space-y-4">
                   {[
-                    "Everything in Free Plan",
-                    "5GB Cloud Storage",
-                    "Email and Chat Support",
-                    "Access to Community Forum",
-                    "Single User Access",
-                    "Access to Basic Templates",
-                    "Mobile App Access",
-                    "1 Custom Report Per Month",
-                    "Monthly Product Updates",
-                    "Standard Security Features",
+                    "24-hour support response time",
+                    "Unlimited Revisions",
+                    "Negotiable delivery time",
+                    "Fourth, access to all components weekly",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <Check className="size-3" />
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
+                <p className="text-muted-foreground mt-6 text-sm">
+                  Team can be any size, and you can add or switch members as
+                  needed.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
