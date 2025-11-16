@@ -1,61 +1,64 @@
 import { cn } from "@/lib/utils";
 import {
-  IconAdjustmentsBolt,
+  IconBrandDribbbleFilled,
+  IconBrandReact,
+  IconBrandNodejs,
+  IconCode,
   IconCloud,
-  IconCurrencyDollar,
-  IconEaseInOut,
-  IconHeart,
-  IconHelp,
-  IconRouteAltLeft,
-  IconTerminal2,
+  IconBrandAppstore,
+  IconChartAreaLineFilled,
+  IconTournament,
 } from "@tabler/icons-react";
 
 export default function FeaturesOne() {
   const features = [
     {
-      title: "Built for developers",
+      title: "Design Engineering (UI)",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <IconTerminal2 />,
+        "We craft intuitive, modern & conversion-focused designs that turn ideas into delightful user experiences.",
+      icon: <IconBrandDribbbleFilled />,
     },
     {
-      title: "Ease of use",
+      title: "Frontend Engineering",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <IconEaseInOut />,
+        "We build fast, responsive, and pixel-perfect interfaces that feel smooth on every device.",
+      icon: <IconBrandReact />,
     },
     {
-      title: "Pricing like no other",
+      title: "Backend Engineering",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <IconCurrencyDollar />,
+        "We architect secure, scalable, and high-performance backend systems that power your product reliably.",
+      icon: <IconBrandNodejs />,
     },
     {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
+      title: "Full-Stack Engineering",
+      description:
+        "We handle the entire product lifecycle—design, frontend, backend, and infrastructure—so you can ship faster with confidence.",
+      icon: <IconCode />,
+    },
+    {
+      title: "DevOps Engineering",
+      description:
+        "We automate deployments, optimize performance, and ensure your systems run smoothly with zero downtime.",
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
-      icon: <IconRouteAltLeft />,
-    },
-    {
-      title: "24/7 Customer Support",
+      title: "Mobile Applications",
       description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
-      icon: <IconHelp />,
+        "We develop high-quality, cross-platform mobile apps that deliver a seamless experience on both iOS and Android.",
+      icon: <IconBrandAppstore />,
     },
     {
-      title: "Money back guarantee",
+      title: "Business Analyst",
       description:
-        "If you donot like EveryAI, we will convince you to like us.",
-      icon: <IconAdjustmentsBolt />,
+        "We translate your business needs into clear, actionable requirements that drive product success.",
+      icon: <IconChartAreaLineFilled />,
     },
     {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
-      icon: <IconHeart />,
+      title: "AI Agents",
+      description:
+        "We build intelligent, autonomous AI agents that automate workflows, boost productivity, and scale your operations.",
+      icon: <IconTournament />,
     },
   ];
 
