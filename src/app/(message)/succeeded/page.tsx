@@ -3,22 +3,24 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import React, { useEffect, useRef } from "react";
+import React, { Suspense, useEffect, useRef } from "react";
 
-export default function page() {
+// Inner component that uses useSearchParams - must be wrapped in Suspense
+function SucceededContent() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-
   const router = useRouter();
-
   const searchParams = useSearchParams();
   const from = searchParams.get("from");
 
+  // Redirect check - runs when from param changes
   useEffect(() => {
-    // To restrict the direct access through url :
     if (from !== "contact") {
       router.replace("/");
     }
+  }, [from, router]);
 
+  // Canvas animation setup - runs once on mount
+  useEffect(() => {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -348,5 +350,23 @@ export default function page() {
         </p>
       </section>
     </section>
+  );
+}
+
+// Default export wraps the content in Suspense boundary
+export default function Page() {
+  return (
+    <Suspense
+      fallback={
+        <div
+          className="minimal-root"
+          style={{ display: "grid", placeItems: "center" }}
+        >
+          <div style={{ color: "#fafafa" }}>Loading...</div>
+        </div>
+      }
+    >
+      <SucceededContent />
+    </Suspense>
   );
 }
