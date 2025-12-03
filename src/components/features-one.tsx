@@ -63,7 +63,7 @@ export default function FeaturesOne() {
   ];
 
   return (
-    <div className="mt-10">
+    <div className="mt-10" id="solution">
       <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
         <h2 className="text-balance text-4xl font-medium lg:text-5xl">
           The Solution We Offer
